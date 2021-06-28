@@ -6,11 +6,18 @@ const elements =[
                     {colour:'Green', value:10},
                     {colour:'Black', value:100}
                 ];
+function sortObject (a,b){
+    return a.value - b.value
+}
+function sortNumber (a,b){
+    return a-b
+}
+function sortString (a,b){
+    return a-b
+}
 
 function sorting(){
-    return elements.sort((a,b)=>{
-        return a.value - b.value
-    })
+    return elements.sort(sortNumber)
 }
 
 console.log(sorting())
